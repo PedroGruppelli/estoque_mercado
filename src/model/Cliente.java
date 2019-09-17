@@ -33,7 +33,10 @@ public class Cliente {
     }
 
     public void setNome(String nome) {
-        this.nome = nome;
+        if (this.getNome().length() < 3 || this.getNome().length() > 20) {
+           
+       } 
+     this.nome = nome;
     }
 
     public int getCpf() {
