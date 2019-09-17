@@ -5,6 +5,7 @@
  */
 package estoque.project;
 
+import model.Produto;
 import java.util.ArrayList;
 import java.util.Scanner;
 
