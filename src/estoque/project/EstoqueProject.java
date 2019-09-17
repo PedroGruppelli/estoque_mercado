@@ -20,6 +20,8 @@ public class EstoqueProject {
      */
     public static void main(String[] args) {
         
+       
+        
         //puxa o scanner
         Scanner teclado = new Scanner (System.in);
         
@@ -62,7 +64,15 @@ public class EstoqueProject {
         int select = teclado.nextInt();
         
         switch (select) {
-            case 1: 
+            case 1: System.out.println("+------ Mercado JavaLovers ------+");
+                    System.out.println("|                                |");
+                    System.out.println("|     **   Área do cliente **    |");
+                    System.out.println("|                                |");
+                    System.out.println("|  QUAL PRODUTO DESEJA COMPRAR?  |" ) ;
+                    System.out.println (estoque);
+                    System.out.println("|                                |");
+                    System.out.println("+--------------------------------+");
+                    System.out.println("Digite aqui ");
                 break;
             case 2:
                 System.out.println("+------ Mercado JavaLovers ------+");
