@@ -8,6 +8,9 @@ package estoque.project;
 import model.Produto;
 import java.util.ArrayList;
 import java.util.Scanner;
+import static service.Util.comprar;
+import static service.Util.restrito;
+import static service.Util.verEstoque;
 
 /**
  *
@@ -64,47 +67,13 @@ public class EstoqueProject {
             
             switch (select) {
                 case 1:
-                    System.out.println("+------ Mercado JavaLovers ------+");
-                    System.out.println("|                                |");
-                    System.out.println("|     **   Área do cliente **    |");
-                    System.out.println("|                                |");
-                    System.out.println("|  QUAL PRODUTO DESEJA COMPRAR?  |");
-                    System.out.println(estoque);
-                    System.out.println("|                                |");
-                    System.out.println("+--------------------------------+");
-                    System.out.println("Digite aqui ");
+                    comprar();
                     break;
                 case 2:
-                    System.out.println("+------ Mercado JavaLovers ------+");
-                    System.out.println("|                                |");
-                    System.out.println("|     **   Área do cliente **    |");
-                    System.out.println("|                                |");
-                    System.out.println("|       PRODUTOS EM ESTOQUE       ");
-                    System.out.println(estoque);
-                    System.out.println("|                                |");
-                    System.out.println("+--------------------------------+");
-                    System.out.println("Digite aqui ");
+                   verEstoque();
                     break;
                 case 3:
-                    System.out.println("                    ");
-                    System.out.println("Informe a senha (númerica): ");
-                    int senha = teclado.nextInt();
-                    if (senha == 69) {
-                        System.out.println("  ***BEM VINDO A ÁREA RESTRITA***  ");
-                        System.out.println("+****** Mercado JavaLovers ******+");
-                        System.out.println("|                                |");
-                        System.out.println("|     **  Área Restrita  **      |");
-                        System.out.println("|                                |");
-                        System.out.println("|      1 - Adicionar Cliente     |");
-                        System.out.println("|      2 - Excluir Cliente       |");
-                        System.out.println("|      3 - Adicionar Produto     |");
-                        System.out.println("|      4 - Excluir Produto       |");
-                        System.out.println("|      9 - Sair/Cancelar         |");
-                        System.out.println("|                                |");
-                        System.out.println("+********************************+");
-                    } else if (senha != 69) {
-                        System.out.println("Senha incorreta...bye bye!");
-                    } 
+                     restrito();
                         break;
               
             }
