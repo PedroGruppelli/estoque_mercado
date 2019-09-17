@@ -77,7 +77,7 @@ public class EstoqueProject {
                 case 2:
                     System.out.println("+------ Mercado JavaLovers ------+");
                     System.out.println("|                                |");
-                    System.out.println("|     **   Área do cliente **    |");
+                    System.out.println("|     **  Área do cliente **     |");
                     System.out.println("|                                |");
                     System.out.println("|       PRODUTOS EM ESTOQUE       ");
                     System.out.println(estoque);
