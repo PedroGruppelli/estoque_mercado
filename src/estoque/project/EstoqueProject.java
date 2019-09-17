@@ -47,7 +47,7 @@ public class EstoqueProject {
          */
         int select = 0;
             do {
-            System.out.println("+------ Mercado JavaLovers ------+");
+            System.out.println("+------ Mercado JavaLover ------+");
             System.out.println("|                                |");
             System.out.println("|     **   Área do cliente **    |");
             System.out.println("|                                |");
