@@ -52,9 +52,9 @@ public class Cliente {
     }
     
     public void setNome(String nome) {
-        if (this.getNome().length() < 3 || this.getNome().length() > 20) {
-           
-       } 
+        if (this.getNome().length() < 3 || this.getNome().length() > 25) {
+            System.out.println("O nome deverá ter entre 3 e 25 caracteres!");
+       }else
      this.nome = nome;
     }
 

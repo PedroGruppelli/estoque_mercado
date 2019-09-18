@@ -9,6 +9,7 @@ import model.Produto;
 import java.util.ArrayList;
 import java.util.Scanner;
 import static service.Util.comprar;
+import static service.Util.menu;
 import static service.Util.restrito;
 import static service.Util.verEstoque;
 
@@ -49,38 +50,24 @@ public class EstoqueProject {
          * System.out.println(p.getValorVenda()); });
          */
         int select = 0;
-            do {
-            System.out.println("+------ Mercado JavaLover ------+");
-            System.out.println("|                                |");
-            System.out.println("|     **   Área do cliente **    |");
-            System.out.println("|                                |");
-            System.out.println("|      1 - Realizar compra       |");
-            System.out.println("|      2 - Ver estoque           |");
-            System.out.println("|      3 - Área Restrita         |");
-            System.out.println("|      9 - Sair/Cancelar         |");
-            System.out.println("|                                |");
-            System.out.println("+--------------------------------+");
-            System.out.println("Digite aqui ");
-
+        do {
+            menu();
 
             select = teclado.nextInt();
-            
+
             switch (select) {
                 case 1:
                     comprar();
                     break;
                 case 2:
-                   verEstoque();
+                    verEstoque();
                     break;
                 case 3:
-                     restrito();
-                        break;
-              
+                    restrito();
+                    break;
+
             }
-            }while (select != 9);
-            
-  
+        } while (select != 9);
 
-        }
     }
-
+}
