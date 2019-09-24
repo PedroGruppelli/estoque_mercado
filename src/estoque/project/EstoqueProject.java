@@ -12,6 +12,7 @@ import static service.Util.comprar;
 import static service.Util.menu;
 import static service.Util.restrito;
 import static service.Util.verEstoque;
+import static service.Util.exibeEstoque;
 
 /**
  *
@@ -23,7 +24,7 @@ public class EstoqueProject {
      * @param args the command line arguments
      */
     @SuppressWarnings("empty-statement")
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
 
         //puxa o scanner
         Scanner teclado = new Scanner(System.in);

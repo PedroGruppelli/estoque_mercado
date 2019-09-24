@@ -1,6 +1,8 @@
 package service;
 
 import java.util.Scanner;
+import estoque.project.EstoqueProject;
+
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -12,20 +14,21 @@ import java.util.Scanner;
  * @author Pedro
  */
 public class Util {
+
     
     public static void menu() {
-            System.out.println("+------ Mercado JavaLover ------+");
-            System.out.println("|                                |");
-            System.out.println("|     **   Área do cliente **    |");
-            System.out.println("|                                |");
-            System.out.println("|      1 - Realizar compra       |");
-            System.out.println("|      2 - Ver estoque           |");
-            System.out.println("|      3 - Área Restrita         |");
-            System.out.println("|      9 - Sair/Cancelar         |");
-            System.out.println("|                                |");
-            System.out.println("+--------------------------------+");
-            System.out.println("Digite aqui ");
-        
+        System.out.println("+------ Mercado JavaLover ------+");
+        System.out.println("|                                |");
+        System.out.println("|     **   Área do cliente **    |");
+        System.out.println("|                                |");
+        System.out.println("|      1 - Realizar compra       |");
+        System.out.println("|      2 - Ver estoque           |");
+        System.out.println("|      3 - Área Restrita         |");
+        System.out.println("|      9 - Sair/Cancelar         |");
+        System.out.println("|                                |");
+        System.out.println("+--------------------------------+");
+        System.out.println("Digite aqui ");
+
     }
 
     public static void comprar() {
@@ -41,6 +44,8 @@ public class Util {
     }
 
     public static void verEstoque() {
+        Scanner teclado = new Scanner(System.in);
+
         System.out.println("+------ Mercado JavaLovers ------+");
         System.out.println("|                                |");
         System.out.println("|     **   Área do cliente **    |");
@@ -49,16 +54,22 @@ public class Util {
         System.out.println();
         System.out.println("|                                |");
         System.out.println("+--------------------------------+");
+        System.out.println("*Aperte qualquer botão para voltar ao menu *");
         System.out.println("Digite aqui ");
+        int wat = teclado.nextInt();
     }
 
-    public static void restrito() {
-        Scanner teclado = new Scanner (System.in);
+    public static void restrito() throws InterruptedException {
+        Scanner teclado = new Scanner(System.in);
         System.out.println("                    ");
         System.out.println("Informe a senha (númerica): ");
         int senha = teclado.nextInt();
-        if (senha == 69) {
-            System.out.println("  ***BEM VINDO A ÁREA RESTRITA***  ");
+        
+              if (senha == 69) {
+           Thread.sleep(2000);
+            System.out.println("**SENHA CORRETA**");
+            Thread.sleep(1000);
+            System.out.println("    ***    ÁREA RESTRITA***  ");
             System.out.println("+****** Mercado JavaLovers ******+");
             System.out.println("|                                |");
             System.out.println("|     **  Área Restrita  **      |");
@@ -70,7 +81,20 @@ public class Util {
             System.out.println("|      9 - Sair/Cancelar         |");
             System.out.println("|                                |");
             System.out.println("+********************************+");
-        } else if (senha != 69) {
+                  System.out.println("Digite aqui:");
+            int opc = teclado.nextInt();
+                  if (opc == 1){
+                      adicionarcliente();
+                  } else if (opc == 2) {
+                      excluircliente();
+                  } else if (opc ==3){
+                      adicionarProduto();
+                  } else if (opc == 4){
+                      excluirProduto();
+                  }
+            
+        } else {
+            Thread.sleep(2000);      
             System.out.println("Senha incorreta...bye bye!");
         }
     }
@@ -78,10 +102,23 @@ public class Util {
     public static void consultar() {
         System.out.println("Você entrou na área restrita.");
     }
-    
-    
-    
-    
-    
-    
+    public static void adicionarcliente(){
+        
+    }
+    public static void excluircliente(){
+        
+    }
+    public static void adicionarProduto(){
+        
+    }
+    public static void excluirProduto(){
+        
+    }
+    public static void exibeEstoque(){
+        for (int i = 0; i < estoque.size(); i++) {
+			System.out.println(estoque.get(i));
+
+		}
+    }
+
 }
